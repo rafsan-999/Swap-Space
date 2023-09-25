@@ -29,7 +29,10 @@ Swap space in Linux is used when the amount of physical memory (RAM) is full. If
    
        /swapfile none swap sw 0 0
 
-If you want to disable swap temporarily, you can use the swapoff command:
+10. If you want to disable swap temporarily, you can use the swapoff command:
 
-      sudo swapoff -a
+        sudo swapoff -a
+11. Regenerate mount units so that your system registers the new configuration:
+
+        systemctl daemon-reload
    
