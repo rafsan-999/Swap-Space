@@ -1,0 +1,28 @@
+1.Check available disk space: df -h
+2.Create a 2G swap file:sudo fallocate -l 2G /swapfile
+3.Set appropriate permissions: Change the permissions of the swap file 
+to only allow root to read and write to it: sudo chmod 600 /swapfile
+
+4.Set up the swap space:To set up the swap space on the newly created 
+file, use the mkswap command: sudo mkswap /swapfile
+
+5.Enable the swap file: Activate the swap file using 
+the swapon command: sudo swapon /swapfile
+
+
+7.Make the swap space persistent:Open the /etc/fstab 
+file in a text editor (e.g., using vi nano /etc/fstab) and add the 
+following line at the end of the file: /swapfile none swap sw 0 0
+
+Verify the swap space: Confirm that the swap file is now being used by running the free command:
+#free -h
+The output should show the swap space in use
+
+To show swap Space command:
+swapon --show
+
+
+
+
+
+
